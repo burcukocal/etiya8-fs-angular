@@ -1,0 +1,21 @@
+<ul class="list-group">
+    <!-- < Angular 17 -->
+    <ng-container *ngFor="let product of products">
+      <li class="list-group-item list-group-item-{{ variantOld }}" *ngIf="!product.discontinued; else discontinuedElse">
+        {{ product.name }} - {{ product.price }}
+      </li>
+      <ng-template #discontinuedElse>
+        <li class="list-group-item list-group-item-{{ variantDiscontinued }}">{{ product.name }} discontinued.</li>
+      </ng-template>
+    </ng-container>
+
+    <!-- >= Angular 17 -->
+    @for(product of products; track product.name) {
+      @if(!product.discontinued) {
+        <li class="list-group-item list-group-item-{{ variantNew }}">{{ product.name }} - {{ product.price }}</li>
+      }
+      @else {
+        <li class="list-group-item list-group-item-{{ variantDiscontinued }}">{{ product.name }} discontinued.</li>
+      }
+    }
+  </ul>
