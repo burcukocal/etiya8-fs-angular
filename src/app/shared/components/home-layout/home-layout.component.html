@@ -1,0 +1,24 @@
+<div class="min-vh-100 w-100 d-flex flex-column">
+  <app-navbar
+  title="RentACar"
+  [items]="navbarItems"
+  [navbarEndTemplate]="navbarEnd"
+>
+  <!-- [navbarStartTemplate]="navbarStart" -->
+  <!-- <ng-template #navbarStart>
+      <h1 class="navbar-brand">Rent A Car</h1>
+    </ng-template> -->
+  <ng-template #navbarEnd>
+    <app-button>Login</app-button>
+  </ng-template>
+</app-navbar>
+
+<main class="container-fluid flex-grow-1 py-3">
+  <app-listgroup></app-listgroup>
+  <!-- <ng-content></ng-content> -->
+</main>
+
+<app-footer>
+  
+</app-footer>
+</div>

@@ -35,6 +35,7 @@ export class ListgroupComponent {
       price: 800,
       discontinued: false,
     },
+    
   ];
   @Input() items: object[] = [this.products];
   @Input() variantNew: ListGroupVariant = 'success';

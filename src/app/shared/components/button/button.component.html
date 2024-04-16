@@ -1,5 +1,7 @@
-<button [type]="type" class="btn btn-{{ variant }}"
+<div class="d-flex justify-content-center pt-4">
+  <button [type]="type" class="btn btn-{{ variant }}"
         (click)="onClick()">
   <!-- Child content -->
   <ng-content></ng-content>
 </button>
+</div>
